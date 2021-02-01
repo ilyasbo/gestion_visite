@@ -76,8 +76,8 @@ namespace GestionVisite
         }
         private double calculateDistanceTraveled()
         {
-            return Enumerable.Range(0, (ordre.Count() - 2))
-                .Select((index) => Helper.Distance(ordre[index],ordre[index+1]))
+            return Enumerable.Range(0, (ordre.Count() - 1))
+                .Select((index) => Helper.Distance(ordre[index], ordre[index + 1]))
                 .Aggregate(Helper.Distance(Commercial,ordre[0]), (acc, x) => acc + x);
         }
     }
